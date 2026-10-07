@@ -52,4 +52,4 @@ def profile(**kwargs):     # collects extra keyword arguments into a dict
 
 ---
 
-*More sections coming as the walkthrough progresses — scope, type hints, pure functions, and classes.*
+There is some debate on whether  prompts should go inside or outside the function but the prompt should go outside the function.
