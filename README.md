@@ -320,6 +320,7 @@ $$
 \texttt{raise} \text{ and } \texttt{try/except} & \text{Raise where detected, catch where you can recover} \\
 \hline
 \end{array}
+$$
 ````
 ````
 
