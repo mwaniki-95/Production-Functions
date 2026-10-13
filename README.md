@@ -52,4 +52,26 @@ def profile(**kwargs):     # collects extra keyword arguments into a dict
 
 ---
 
-There is some debate on whether  prompts should go inside or outside the function but the prompt should go outside the function.
+## 4. Where should prompts go?
+
+There is some debate about whether prompts (`input()`) belong inside or outside a function. The recommended approach is to keep the prompt **outside** the function and pass the value in as an argument. This keeps the function reusable and testable, because it works the same whether the value came from the user, a file, or another function.
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print(add(a, b))
+```
+
+## 5. Type Hinting
+
+Type hinting is described in `PEP 484` and is widely used in production code. It tells readers and tools what types a function expects and returns.
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+Type hints are **not enforced at runtime**: if they are violated, Python still runs normally. Instead, type checkers such as `mypy` and editors using Pylance highlight the mismatch before you run the code.
